@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Salary Predictor</title>
+</head>
+<form action="{{ url_for('index') }}" method="POST">
+	<fieldset>
+		<legend>Input values:</legend>
+		Number of Years Experience:
+		<input name="yearsnum" type="number" step=0.01 required />
+		<input type="submit" />
+	</fieldset>
+</form>
+<br>
+<div>
+	{% if result %}
+		<br>Predicted Salary: <p style="font-size:20px; margin-left:30px;">{{ result }}</p>
+	{% endif %}
+</div>
+</html>
+
